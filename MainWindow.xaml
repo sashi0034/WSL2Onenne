@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WSL2Onenne"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="WSL2 Onenne" Height="320" Width="400">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="./MainWindowResource.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Background="{StaticResource NormalDark}">
+        <Grid VerticalAlignment="Center">
+            <StackPanel VerticalAlignment="Center">
+                <StackPanel>
+                    <TextBlock Text="WSL2をおねんねさせましょう。"/>
+                    <local:CommandView x:Name="viewShutdown"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Gray" Text="'wsl2 --shutdown' を実行した回数: "/>
+                        <local:IntTextView x:Name="textNumExecute" Value="0"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>

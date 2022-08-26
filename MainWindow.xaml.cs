@@ -24,5 +24,7 @@ namespace WSL2Onenne
         {
             InitializeComponent();
         }
+
+        private int testValue;
     }
 }
