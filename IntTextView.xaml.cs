@@ -23,7 +23,6 @@ namespace WSL2Onenne
         public IntTextView()
         {
             InitializeComponent();
-            text.Foreground = Brushes.White;
         }
 
         private int _value;

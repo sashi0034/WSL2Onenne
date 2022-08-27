@@ -20,11 +20,13 @@ namespace WSL2Onenne
     /// </summary>
     public partial class MainWindow : Window
     {
+        WslKiller wslKiller;
+
         public MainWindow()
         {
             InitializeComponent();
+            wslKiller = new WslKiller(viewShutdown, textNumExecute);
         }
 
-        private int testValue;
     }
 }

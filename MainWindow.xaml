@@ -17,10 +17,10 @@
         <Grid VerticalAlignment="Center">
             <StackPanel VerticalAlignment="Center">
                 <StackPanel>
-                    <TextBlock Text="WSL2をおねんねさせましょう。"/>
-                    <local:CommandView x:Name="viewShutdown"/>
+                    <TextBlock Text="バックグラウンドでWSL2をおねんねさせましょう。"/>
+                    <local:CommandView x:Name="viewShutdown" TextStart="おねんね開始" TextStop="おねんね終了"/>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Foreground="Gray" Text="'wsl2 --shutdown' を実行した回数: "/>
+                        <TextBlock Foreground="Gray" Text="おねんね実行回数: "/>
                         <local:IntTextView x:Name="textNumExecute" Value="0"/>
                     </StackPanel>
                 </StackPanel>
