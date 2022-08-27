@@ -38,12 +38,12 @@ namespace WSL2Onenne
 
         private async void startProcess()
         {
-            _taskCancellation = new CancellationTokenSource();
-            //_textNumExecuteRef.Value = 0;
+            var cancellation = new CancellationTokenSource();
+            _taskCancellation = cancellation;
 
             while (true)
             {
-                if (_taskCancellation.IsCancellationRequested) return;
+                if (cancellation.IsCancellationRequested) return;
 
                 tryKillWsl();
 
