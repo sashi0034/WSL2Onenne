@@ -39,7 +39,7 @@ namespace WSL2Onenne
         private async void startProcess()
         {
             _taskCancellation = new CancellationTokenSource();
-            _textNumExecuteRef.Value = 0;
+            //_textNumExecuteRef.Value = 0;
 
             while (true)
             {
